@@ -260,7 +260,7 @@ void fade()
   for (int s=0; s < NUM_STRIPS; s++) {
     for (int i=0; i < LEDS_PER_STRIP; i++) {
       int pix;
-#if 0
+#if 1
   //fade mode
       pix=*pixelPtr;
       if (pix){
@@ -286,7 +286,7 @@ void fade()
           pix=ft; //0x00;
         pix&=0xff;
 
-        pix=(ft+i)&0x7f;  //trails
+        pix=(ft+i)&0xff;  //trails
         
 //        if (pix>0x80)pix=0x80;
 
